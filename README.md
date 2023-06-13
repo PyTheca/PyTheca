@@ -1,5 +1,18 @@
-#### Hi there, welcome to Pytheca. 👋
-
+**************************************************
+**************************************************
+**  Welcome to                                  **
+**                                              **
+**  ****  *   * ***** *   * *****  ***   ***    **
+**  *   * *   *   *   *   * *     *   * *   *   **
+**  *   *  * *    *   *   * *     *     *   *   **
+**  ****    *     *   ***** ***** *     *****   **
+**  *       *     *   *   * *     *     *   *   **
+**  *       *     *   *   * *     *   * *   *   **
+**  *       *     *   *   * *****  ***  *   *   **
+**                                              **
+**  The world smallest Python Operating System  **
+**************************************************
+**************************************************
 
 - 🔭 Pytheca is an interface that searches, finds and executes Python modules and displays the output in a Mathematica like style. The modules are stores in a package folder en subfolders (one level deep). As I said the interface behaves somewhat like Mathematica, but also like a modern calculator. Modules will be added by me, but Python programmers can also submit modules. The areas in which this app and accompanying package can be used are versatile: mathematics, physics, chemistry, biology, geology, astronomy, statistics. The list is basically endless.
 
