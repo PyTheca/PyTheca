@@ -1,4 +1,5 @@
-# Date 2023-05-02
+# Date 2023-12-02
+
 
 
 
@@ -6,14 +7,18 @@
 
 root_folder = "files"
 line_length = 80
+question_end = ": "
+
 
 
 
 # import the neccesary modules
 
+import files.introduction.random_sentence_generator as introduction_sentence
 import importlib
 import os
 import time
+
 
 
 
@@ -39,13 +44,22 @@ print()
 
 
 
+
+# say hello to customer
+
+print("_" * line_length)
+print(introduction_sentence.generate())
+print("_" * line_length)
+
+
+
+
 # find module
 
 def find_module(my_module):    
 
     # creating a modules list from the package folder
     directory_folder_list = os.listdir(root_folder)
-
 
     fullpaths = map(lambda name: os.path.join(root_folder, name), directory_folder_list)
 
@@ -72,8 +86,8 @@ def find_module(my_module):
     print(str(counter) + " Found modules: \t" + str(final_results))
     print()
     
+    return (str(final_results))
 
-    return (final_results)
 
 
 
@@ -81,100 +95,17 @@ def find_module(my_module):
 
 def collect_answers(questions):
 
-    question_total = len(questions)-1
- 
-
-    answer0 = []
-    answer1 = []
-    answer2 = []
-    answer3 = []
-    answer4 = []
-    answer5 = []
-    answer6 = []
-    answer7 = []
-    answer8 = []
-    answer9 = []
-    answer10 = []
-    answer11 = []
-    answer12 = []
-    answer13 = []
-    answer14 = []
-    answer15 = []
-    answer16 = []
-     
     print(str(counter) + " The input parameters: ")
     print()
-    
-    if question_total >= 0:
-        answer0 = input(questions[0])
-        answer_list = answer0
 
-    if question_total >= 1:
-        answer1 = input(questions[1])
-        answer_list = answer0 + "," + answer1
-        
-    if question_total >= 2:
-        answer2 = input(questions[2])
-        
-        answer_list = answer0 + "," + answer1 + "," + answer2
-        
-    if question_total >= 3:
-        answer3 = input(questions[3])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3
+    answer_list = input("\t" + questions[0]+ question_end)
 
-    if question_total >= 4:
-        answer4 = input(questions[4])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4
-
-    if question_total >= 5:
-        answer5 = input(questions[5])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5
-
-    if question_total >= 6:
-        answer6 = input(questions[6])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6
-
-    if question_total >= 7:
-        answer7 = input(questions[7])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7
-
-    if question_total >= 8:
-        answer8 = input(questions[8])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7 + "," + answer8
-
-    if question_total >= 9:
-        answer9 = input(questions[9])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7 + "," + answer8 + "," + answer9
-
-    if question_total >= 10:
-        answer10 = input(questions[10])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7 + "," + answer8 + "," + answer9 + "," + answer10
-
-    if question_total >= 11:
-        answer11 = input(questions[11])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7 + "," + answer8 + "," + answer9 + "," + answer10 + "," + answer11
-
-    if question_total >= 12:
-        answer12 = input(questions[12])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7 + "," + answer8 + "," + answer9 + "," + answer10 + "," + answer11 + "," + answer12
-
-    if question_total >= 13:
-        answer13 = input(questions[13])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7 + "," + answer8 + "," + answer9 + "," + answer10 + "," + answer11 + "," + answer12 + "," + answer13
-
-    if question_total >= 14:
-        answer14 = input(questions[14])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7 + "," + answer8 + "," + answer9 + "," + answer10 + "," + answer11 + "," + answer12 + "," + answer13 + "," + answer14
-
-    if question_total >= 15:
-        answer15 = input(questions[15])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7 + "," + answer8 + "," + answer9 + "," + answer10 + "," + answer11 + "," + answer12 + "," + answer13 + "," + answer14 + "," + answer15
-
-    if question_total >= 16:
-        answer16 = input(questions[16])
-        answer_list = answer0 + "," + answer1 + "," + answer2 + "," + answer3 + "," + answer4 + "," + answer5 + "," + answer6 + "," + answer7 + "," + answer8 + "," + answer9 + "," + answer10 + "," + answer11 + "," + answer12 + "," + answer13 + "," + answer14 + "," + answer15 + "," + answer16
+    for item in range (1, len(questions)):
+        answer = input("\t" + questions[item]+ question_end)
+        answer_list = answer_list + "," + answer
 
     return(answer_list)
+
 
 
 
@@ -182,13 +113,12 @@ def collect_answers(questions):
 
 def main():
 
-    rootfolder = "files"
+    #### rootfolder = "files"
     
     print()
     
-    my_module = input(str(counter) + " Module: \t\t\t").replace(" ", "")
+    my_module = "/" + input(str(counter) + " Module: \t\t").replace(" ", "") + "." ### added "/" and "."
     print()
-
 
     # importing and evaluating the module
     
@@ -199,21 +129,19 @@ def main():
         imported_module = importlib.import_module(module_path)
 
     except:
-        print(str(counter) + " Warning: \t\t\tplease be more specific in your module name!")
+        print(str(counter) + " Warning: \t\tplease be more specific in your module name!")
         print()
-
 
     # find and printing the help
 
     try:
         explain = eval("imported_module" + ".Explain()")
-        print(str(counter) + " Explaination: \t\t" + explain)
+        print(str(counter) + " Explaination: \t" + explain)
         print()
 
     except:
-        print(str(counter) + " Explaination: \t\t" + "not available!")
+        print(str(counter) + " Explaination: \t" + "not available!")
         print()
-
 
     # find the questions UNDER DEVELOPMENT
 
@@ -222,7 +150,6 @@ def main():
 
     except:
         print(str(counter) + " Questions: \t\t" + "not available!")
-
 
     # import data
     
@@ -236,15 +163,15 @@ def main():
 
     duration = str(round((end - start)*1000, 4))
     
-
     # printing all the results
     
     print()
-    print(str(counter) + " Result: \t\t\t" + myresult)
+    print(str(counter) + " Result: \t\t" + myresult)
 
     print()
-    print(str(counter) + " Duration: \t\t\t" + duration + " ms")
+    print(str(counter) + " Duration: \t\t" + duration + " ms")
     print("_" * line_length)
+
 
 
 
@@ -256,15 +183,11 @@ for counter in range(1, 1000000):
         
     except Exception as error_message :
         print()
-        print(str(counter) + " Error message: \t" + str(error_message) + ".")
-        print()
-        print(str(counter) + " Advice: \t\t\tan existing module or parameter should be specified.")
+        ### print(str(counter) + " Error message: \t" + str(error_message) + ".")
+        ### print()
+        print(str(counter) + " Advice: \t\tan existing module or parameter(s) should be specified, or the module has programming errors.")
         print()
         print("_" * line_length)
-
-
-
-
 
 
 
