@@ -1,4 +1,4 @@
-# Date 2023-12-10
+# Date 2023-12-15
 
 
 
@@ -98,10 +98,10 @@ def collect_answers(questions):
     print(str(counter) + " The input parameters: ")
     print()
 
-    answer_list = input("\t" + questions[0]+ question_end)
+    answer_list = input("\t" + questions[0] + question_end)
 
     for item in range (1, len(questions)):
-        answer = input("\t" + questions[item]+ question_end)
+        answer = input("\t" + questions[item] + question_end)
         answer_list = answer_list + "," + answer
 
     return(answer_list)
@@ -135,8 +135,8 @@ def main():
     # find and printing the help
 
     try:
-        explain = eval("imported_module" + ".Explain()")
-        print(str(counter) + " Explaination: \t" + explain)
+        introduction = eval("imported_module" + ".introduction()")
+        print(str(counter) + " Introduction: \t" + introduction)
         print()
 
     except:
@@ -146,22 +146,22 @@ def main():
     # find the questions UNDER DEVELOPMENT
 
     try:
-        questions = eval("imported_module" + ".Questions()")
+        questions = eval("imported_module" + ".questions()")
 
     except:
         print(str(counter) + " Questions: \t\t" + "not available!")
 
     # import data
     
-    executable = "imported_module" + ".Execute(" + collect_answers(questions) + ")"
+    executable = "imported_module" + ".perform(" + collect_answers(questions) + ")"
 
-    start = time.time()
+    start_time = time.time()
     
     myresult = str(eval(executable)) # important
 
-    end = time.time()
+    end_time = time.time()
 
-    duration = str(round((end - start)*1000, 4))
+    duration = str(round((end_time - start_time)*1000, 4))
     
     # printing all the results
     
